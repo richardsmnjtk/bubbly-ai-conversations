@@ -87,8 +87,8 @@ const ChatBox: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-muted/20">
-      <div className="p-3 border-b bg-background">
+    <div className="flex flex-col h-screen bg-background">
+      <div className="p-3 border-b bg-background/50 backdrop-blur-sm">
         <h1 className="text-lg font-semibold text-center">AI Assistant</h1>
       </div>
       

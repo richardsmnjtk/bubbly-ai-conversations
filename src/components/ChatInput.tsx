@@ -41,7 +41,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading }) => {
   return (
     <form 
       onSubmit={handleSubmit} 
-      className="flex items-end gap-2 bg-background border-t p-3 sticky bottom-0 w-full"
+      className="flex items-end gap-2 bg-background/80 backdrop-blur-sm border-t border-border/50 p-3 sticky bottom-0 w-full"
     >
       <div className="relative flex-grow">
         <textarea
@@ -50,7 +50,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading }) => {
           onChange={handleTextareaChange}
           onKeyDown={handleKeyDown}
           placeholder="Type a message..."
-          className="w-full resize-none overflow-hidden rounded-xl border border-input px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring min-h-[40px] max-h-[150px]"
+          className="w-full resize-none overflow-hidden rounded-xl border border-input bg-background/50 px-3 py-2 text-sm shadow-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring min-h-[40px] max-h-[150px]"
           rows={1}
           disabled={isLoading}
         />
@@ -58,7 +58,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading }) => {
       <button
         type="submit"
         disabled={!message.trim() || isLoading}
-        className="flex items-center justify-center rounded-full bg-primary text-primary-foreground w-10 h-10 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex items-center justify-center rounded-full bg-primary text-primary-foreground w-10 h-10 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary/90 transition-colors"
       >
         <SendIcon className="h-5 w-5" />
       </button>

@@ -4,7 +4,7 @@ import ChatBox from '@/components/ChatBox';
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark">
       <ChatBox />
     </div>
   );
